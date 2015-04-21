@@ -12,8 +12,10 @@ RGBImageStudent::RGBImageStudent(const RGBImageStudent &other) : RGBImage(other.
 
 
 RGBImageStudent::RGBImageStudent(const int width, const int height) : RGBImage(width, height) {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: Initialize pixel storage
+	int **pixelStorage = new int*[width];
+	for (int i = 0; i < width; ++i) {
+		pixelStorage[i] = new int[height];
+	}
 }
 
 RGBImageStudent::~RGBImageStudent() {
@@ -34,8 +36,7 @@ void RGBImageStudent::set(const RGBImageStudent &other) {
 }
 
 void RGBImageStudent::setPixel(int x, int y, RGB pixel) {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: no comment needed :)
+	pixelStorage[x][y] = pixel;
 }
 
 void RGBImageStudent::setPixel(int i, RGB pixel) {
