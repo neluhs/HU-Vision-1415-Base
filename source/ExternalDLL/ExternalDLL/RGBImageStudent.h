@@ -24,5 +24,5 @@ public:
 	RGB getPixel(int i) const;
 
 private:
-	int pixelStorage;
+	RGB** pixelStorage;
 };

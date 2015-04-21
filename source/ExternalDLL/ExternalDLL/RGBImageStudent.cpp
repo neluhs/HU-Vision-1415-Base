@@ -12,9 +12,9 @@ RGBImageStudent::RGBImageStudent(const RGBImageStudent &other) : RGBImage(other.
 
 
 RGBImageStudent::RGBImageStudent(const int width, const int height) : RGBImage(width, height) {
-	int **pixelStorage = new int*[width];
+	pixelStorage = new RGB*[width];
 	for (int i = 0; i < width; ++i) {
-		pixelStorage[i] = new int[height];
+		pixelStorage[i] = new RGB[height];
 	}
 }
 
