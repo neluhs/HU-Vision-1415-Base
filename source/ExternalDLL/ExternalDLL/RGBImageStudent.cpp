@@ -65,9 +65,7 @@ void RGBImageStudent::setPixel(int i, RGB pixel) {
 }
 
 RGB RGBImageStudent::getPixel(int x, int y) const {
-	int throwError = 0, e = 1 / throwError;
-	//TODO: no comment needed :)
-	return 0;
+	return pixelStorage[x][y];
 }
 
 RGB RGBImageStudent::getPixel(int i) const {
