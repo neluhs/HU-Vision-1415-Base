@@ -23,6 +23,6 @@ public:
 	Intensity getPixel(int i) const;
 
 private:
-	RGB** pixelStorage;
+	Intensity** pixelStorage;
 	int imageWidth = 0, imageHeight = 0;
 };
