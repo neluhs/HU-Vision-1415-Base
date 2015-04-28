@@ -45,7 +45,7 @@ void IntensityImageStudent::setPixel(int x, int y, Intensity pixel) {
 
 void IntensityImageStudent::setPixel(int i, Intensity pixel) {
 	int pixelX = 0, pixelY = 0;
-	for (int index; index < i; index++) {
+	for (int index = 0; index < i; index++) {
 		pixelStorage[pixelX][pixelY];
 		pixelY = index%imageWidth;
 		if (pixelX < imageWidth) {
@@ -85,7 +85,7 @@ Intensity IntensityImageStudent::getPixel(int x, int y) const {
 
 Intensity IntensityImageStudent::getPixel(int i) const {
 	int pixelX = 0, pixelY = 0;
-	for (int index; index < i; index++) {
+	for (int index = 0; index < i; index++) {
 		pixelStorage[pixelX][pixelY];
 		pixelY = index%imageWidth;
 		if (pixelX < imageWidth) {

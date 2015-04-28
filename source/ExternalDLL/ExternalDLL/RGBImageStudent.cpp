@@ -45,7 +45,7 @@ void RGBImageStudent::setPixel(int x, int y, RGB pixel) {
 
 void RGBImageStudent::setPixel(int i, RGB pixel) {
 	int pixelX = 0, pixelY =0;
-	for (int index; index < i; index++) {
+	for (int index = 0; index < i; index++) {
 		pixelStorage[pixelX][pixelY];
 		pixelY = index%imageWidth;
 		if (pixelX < imageWidth) {
@@ -85,7 +85,7 @@ RGB RGBImageStudent::getPixel(int x, int y) const {
 
 RGB RGBImageStudent::getPixel(int i) const {
 	int pixelX = 0, pixelY = 0;
-	for (int index; index < i; index++) {
+	for (int index = 0; index < i; index++) {
 		pixelStorage[pixelX][pixelY];
 		pixelY = index%imageWidth;
 		if (pixelX < imageWidth) {
