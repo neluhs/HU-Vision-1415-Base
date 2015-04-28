@@ -21,4 +21,8 @@ public:
 
 	Intensity getPixel(int x, int y) const;
 	Intensity getPixel(int i) const;
+
+private:
+	RGB** pixelStorage;
+	int imageWidth = 0, imageHeight = 0;
 };
