@@ -25,6 +25,6 @@ public:
 	RGB getPixel(int i) const;
 
 private:
-	RGB** pixelStorage;
-	int imageWidth = 0, imageHeight = 0;
+	RGB* pixelStorage;
+	int imageWidth, imageHeight;
 };

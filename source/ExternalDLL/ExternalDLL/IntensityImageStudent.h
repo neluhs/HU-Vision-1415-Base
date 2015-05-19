@@ -6,6 +6,7 @@
 
 #pragma once
 #include "IntensityImage.h"
+#include <iostream>
 class IntensityImageStudent : public IntensityImage {
 public:
 	IntensityImageStudent();
@@ -23,6 +24,6 @@ public:
 	Intensity getPixel(int i) const;
 
 private:
-	Intensity** pixelStorage;
-	int imageWidth = 0, imageHeight = 0;
+	Intensity* pixelStorage;
+	int imageWidth, imageHeight;
 };
