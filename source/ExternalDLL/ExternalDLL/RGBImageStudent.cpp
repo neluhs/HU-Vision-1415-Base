@@ -34,6 +34,8 @@ void RGBImageStudent::set(const int width, const int height) {
 
 void RGBImageStudent::set(const RGBImageStudent &other) {
 	RGBImage::set(other.getWidth(), other.getHeight());
+	RGB * tmp = pixelStorage;
+	delete[] tmp;
 	pixelStorage = new RGB[other.getWidth() * other.getHeight()];
 	int maxSize = other.getWidth() * other.getHeight();
 	for (int i = 0; i < maxSize; i++){
