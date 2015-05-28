@@ -26,5 +26,4 @@ public:
 
 private:
 	RGB* pixelStorage;
-	int imageWidth, imageHeight;
 };
