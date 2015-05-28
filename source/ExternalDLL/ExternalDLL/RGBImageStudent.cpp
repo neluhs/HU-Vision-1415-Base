@@ -22,6 +22,7 @@ RGBImageStudent::~RGBImageStudent() {
 	delete[] pixelStorage;
 }
 
+/* OLD SHIZZLE
 void RGBImageStudent::set(const int width, const int height) {
 	RGBImage::set(width, height);
 	int size = width*height;
@@ -34,6 +35,31 @@ void RGBImageStudent::set(const int width, const int height) {
 	imageWidth = width;
 	imageHeight = height;
 }
+*/
+
+void RGBImageStudent::set(const int width, const int height) {
+	RGB* newImage = new RGB[width*height];
+	int oldSize = this->getHeight() * this->getWidth();
+	for (int i = 0; (oldSize ? i<width*height : i < oldSize); i++){
+		newImage[i] = (oldSize ? RGB{} : pixelStorage[i]);
+	}
+	RGBImage::set(width, height);
+	RGB * tmp = pixelStorage;
+	delete[] tmp;
+	pixelStorage = newImage;
+}
+
+void RGBImageStudent::set(const RGBImageStudent &other) {
+	RGBImage::set(other.getWidth(), other.getHeight());
+	RGB * tmp = pixelStorage;
+	delete[] tmp;
+	pixelStorage = new RGB[other.getWidth() * other.getHeight()];
+	int maxSize = other.getWidth() * other.getHeight();
+	for (int i = 0; i < maxSize; i++){
+		pixelStorage[i] = other.getPixel(i);
+	}
+}
+
 
 void RGBImageStudent::set(const RGBImageStudent &other) {
 	RGBImage::set(other.getWidth(), other.getHeight());
