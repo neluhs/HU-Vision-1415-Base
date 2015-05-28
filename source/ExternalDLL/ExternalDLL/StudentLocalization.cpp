@@ -17,5 +17,6 @@ bool StudentLocalization::stepFindNoseEndsAndEyes(const IntensityImage &image, F
 }
 
 bool StudentLocalization::stepFindExactEyes(const IntensityImage &image, FeatureMap &features) const {
+
 	return false;
 }
