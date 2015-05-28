@@ -34,8 +34,6 @@ void IntensityImageStudent::set(const int width, const int height) {
 
 void IntensityImageStudent::set(const IntensityImageStudent &other) {
 	IntensityImage::set(other.getWidth(), other.getHeight());
-	Intensity * tmp = pixelStorage;
-	delete[] tmp;
 	pixelStorage = new Intensity[other.getWidth() * other.getHeight()];
 	int maxSize = other.getWidth() * other.getHeight();
 	for (int i = 0; i < maxSize; i++){
